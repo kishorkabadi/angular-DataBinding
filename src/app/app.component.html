@@ -1,0 +1,20 @@
+<app-top-bar></app-top-bar>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+<div>
+  <h4>ngClass with string Example</h4>
+  <p [ngClass]="'blueClass fontBold'">ng Class with css class binding</p>
+
+  <h4>ngClass with array Example</h4>
+  <p [ngClass]="['redClass', 'fontBold']">ng Class with array class binding</p>
+
+  <h4>ngClass with object Example</h4>
+  <p [ngClass]="{ redClass: true, fontBold: false }">
+    ng Class with object binding
+  </p>
+
+  <h4>ngClass with component method Example</h4>
+  <p [ngClass]="getCssClass()">ng Class with component method</p>
+</div>
