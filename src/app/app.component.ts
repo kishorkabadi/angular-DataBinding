@@ -6,16 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  flag: boolean = true;
-
-  isValid: boolean = false;
-  changevalue(valid: boolean) {
-    this.isValid = valid;
-  }
-  getCssClass() {
-    let cssClass;
-    cssClass = { redClass: true,fontBold:true };
-    return cssClass;
+  userName = 'Kishor';
+  friendName = 'Anil';
+  innerText = 'Welcome in Angular Data Binding with Property Binding';
+  innerEventText = 'Welcome in Angular Data Binding with Event Binding';
+  cssFontBold = false;
+  OncClick(flag: boolean) {
+    this.cssFontBold = flag;
+    if (flag == false) {
+      this.innerEventText =
+        'Welcome in Angular Data Binding with Event(click) Binding';
+    } else {
+      this.innerEventText =
+        'Welcome in Angular Data Binding with Event Binding';
+    }
   }
 }
 
